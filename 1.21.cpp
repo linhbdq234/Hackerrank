@@ -9,6 +9,6 @@ int main()
 	int tong2= 2*(a+b);
 	int tong3= 2*(b+c);
 	int tong4= 2*(b+c);
-	cout << min({tong1,tong2,tong3,tong4});
+	cout << min({tong1,tong2,tong3,tong4}) << endl;
 	return 0;
 }
