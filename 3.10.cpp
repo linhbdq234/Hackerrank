@@ -1,20 +1,18 @@
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
+using ll = long long;
 int main()
 {
-	long long n;
+	int n;
 	cin >> n;
-	long long tong=0;
-	for(int i=1;i<=sqrt(n);i++)
+	ll res=1;
+	for(int i=0;i<n;i++)
 	{
-  	if(n%i==0)
-	{
-	long long j=n/i;
-	if(i!=j)  tong+=(i+j);
-	else      tong+=n/i; // truong hop i la can cua n thi chi liet ke 1 lan thoi k se bi trung
+		int p,e;
+		cin >> p >> e; // phan tich so thanh dang n = p1 ^e1 * p2 ^e2 *....
+		res= res*(e+1); // cong thuc la p= (e1 +1) * (e2+1) *(e3+1) *....
+		res %= 1000000007 ;
 	}
-	}
-	cout << tong;
-	return 0;
-}	
+	cout << res;
+}
